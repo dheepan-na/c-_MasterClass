@@ -20,10 +20,9 @@ namespace c__Basics
                     Console.WriteLine("First time voters: Vote responsibly");
                 }
             }
+            //If only one line is after if or else statement. We can remove curly bracket. But it is recommended to use curly bracket.
             else if (age == 17)
-            {
                 Console.WriteLine("Wait for just one year");
-            }
             else
             {
                 Console.WriteLine("Not eligible for voting");
