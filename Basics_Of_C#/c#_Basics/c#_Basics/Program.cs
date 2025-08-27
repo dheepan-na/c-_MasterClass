@@ -6,6 +6,7 @@
         {
             Console.WriteLine("C# Basics");
             IfElseStatement.EligibleForVoting();
+            SwitchCaseStatement.PrintingMonth();
         }
     }
 }
