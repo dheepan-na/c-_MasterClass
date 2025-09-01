@@ -16,7 +16,7 @@
             string answer3 = "Karthik subbaraj";
 
             Console.WriteLine($"Question :{question1}");
-            string userAnswer = Console.ReadLine();
+            string? userAnswer = Console.ReadLine();
             if(userAnswer == answer1)
             {
                 Console.WriteLine("Correct!");
@@ -26,7 +26,44 @@
             {
                 Console.WriteLine($"Wrong answer. The Correct answer is {answer1}");
             }
+
+            Console.WriteLine($"Question :{question2}");
+            string? userAnswer2 = Console.ReadLine();
+            if (userAnswer2 == answer2)
+            {
+                Console.WriteLine("Correct!");
+                score++;
+            }
+            else
+            {
+                Console.WriteLine($"Wrong answer. The Correct answer is {answer2}");
+            }
+
+            Console.WriteLine($"Question :{question3}");
+            string? userAnswer3 = Console.ReadLine();
+            if (userAnswer3 == answer3)
+            {
+                Console.WriteLine("Correct!");
+                score++;
+            }
+            else
+            {
+                Console.WriteLine($"Wrong answer. The Correct answer is {answer3}");
+            }
             Console.WriteLine("Your Total score is " + score);
+
+            if(score ==3)
+            {
+                Console.WriteLine("Excellent");
+            }
+            else if(score >1)
+            {
+                Console.WriteLine("Good job. Try again");
+            }
+            else
+            {
+                Console.WriteLine("Keep learning and try again");
+            }
             Console.ReadKey();
         }
     }
