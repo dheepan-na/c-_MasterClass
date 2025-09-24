@@ -27,6 +27,15 @@
             {
                 Console.WriteLine($"Number is {i}");
             }
+
+            Console.WriteLine("Dec and setting array elements in a single line without assiging each variable.\nCreating a string array for tha challenge");
+
+            string[] weekdays = ["Mon", "tues", "wed", "thurs", "fri", "sat", "sun"];
+
+            foreach(string day in weekdays)
+            {
+                Console.WriteLine($"The days in a week {day}day");
+            }
             Console.ReadKey();
         }
     }
