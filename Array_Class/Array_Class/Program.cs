@@ -36,6 +36,7 @@
             {
                 Console.WriteLine($"The days in a week {day}day");
             }
+            TwodArray.TwodimArray();
             Console.ReadKey();
         }
     }
