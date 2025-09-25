@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("C# Basics");
+            Console.WriteLine("C# Basic");
             IfElseStatement.EligibleForVoting();
             SwitchCaseStatement.PrintingMonth();
         }
