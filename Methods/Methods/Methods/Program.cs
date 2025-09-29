@@ -25,6 +25,20 @@
             string paramFromUser = Console.ReadLine();
             MethodWithParameter(paramFromUser);
 
+            Console.WriteLine("AddOnly Calculator to learn methods with two parameters");
+            Console.WriteLine("Methode created to add two values with return type int.");
+            int AddTwoNumbers(int num1, int num2)
+            {
+                int result = num1 + num2;
+                return result;
+            }
+
+            Console.WriteLine("Enter two numbers to add");
+            int num1 = int.Parse(Console.ReadLine());
+            int num2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("The result of the method is "+AddTwoNumbers(num1,num2));
+
+
             Console.ReadKey();
         }
     }
