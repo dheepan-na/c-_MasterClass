@@ -38,6 +38,21 @@
             int num2 = int.Parse(Console.ReadLine());
             Console.WriteLine("The result of the method is "+AddTwoNumbers(num1,num2));
 
+            Console.WriteLine(" Here we learn about the scope of the variable.");
+            Console.WriteLine("Global variable it will be access by the method that are outside the variable");
+            int globalVariable=0;
+            int SubTwoNumbers(int num1, int num2)
+            {
+                Console.WriteLine("Here the variable is used from ouside the method. Global variable");
+                globalVariable = num1 - num2;
+                Console.WriteLine("Here the local variable is declared inside the method this can be accessed only within the scope.");
+                int localVariable = globalVariable-10;
+                return localVariable;
+            }
+            int result = SubTwoNumbers(num1, num2);
+            Console.WriteLine("Result of globalVariable " + globalVariable);
+            Console.WriteLine("Result of local Variable "+ result);
+
 
             Console.ReadKey();
         }
