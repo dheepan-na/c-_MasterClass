@@ -13,6 +13,19 @@
             MyfirstMethod();
             Console.WriteLine("Calling method for second time");
             MyfirstMethod();
+
+            Console.WriteLine("A parameter is a value we are passing to the method for executing.");
+            Console.WriteLine("Creating a method with a parameter");
+
+            void MethodWithParameter(string param)
+            {
+                Console.WriteLine($"The parameter passed into the method {param}.");
+            }
+
+            string paramFromUser = Console.ReadLine();
+            MethodWithParameter(paramFromUser);
+
+            Console.ReadKey();
         }
     }
 }
