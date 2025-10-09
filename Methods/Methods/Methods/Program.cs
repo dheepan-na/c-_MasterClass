@@ -53,6 +53,12 @@
             Console.WriteLine("Result of globalVariable " + globalVariable);
             Console.WriteLine("Result of local Variable "+ result);
 
+            Console.WriteLine("\n Argument promotion is techniques used to covert the small type of variable to larger type of variable in function.");
+            Console.WriteLine("This can be used instead of explicit conversion");
+            Console.WriteLine(" I have created a method with double type parameter (Large one) and passing int type argument(small type)");
+            Console.WriteLine("Here the argument is being promoted int to double");
+
+            Console.WriteLine("The result is here: "+ ArgumentPromotions.MultiplyTwoNumbers(num1, num2));
 
             Console.ReadKey();
         }
