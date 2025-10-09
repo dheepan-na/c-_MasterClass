@@ -1,7 +1,11 @@
-﻿namespace Methods
+﻿using System.Reflection.Metadata;
+
+namespace Methods
 {
     internal class Program
     {
+        // This is denoted as field or local instance which can used as global variable accross the class.
+          static int resultAsField;
         static void Main(string[] args)
         {
             Console.WriteLine("Creating my first method an calling it.");
@@ -30,6 +34,7 @@
             int AddTwoNumbers(int num1, int num2)
             {
                 int result = num1 + num2;
+                resultAsField = result;
                 return result;
             }
 
@@ -50,6 +55,8 @@
                 return localVariable;
             }
             int result = SubTwoNumbers(num1, num2);
+           
+
             Console.WriteLine("Result of globalVariable " + globalVariable);
             Console.WriteLine("Result of local Variable "+ result);
 
@@ -60,7 +67,18 @@
 
             Console.WriteLine("The result is here: "+ ArgumentPromotions.MultiplyTwoNumbers(num1, num2));
 
+            ModuloTwoNumbers(num1, num2);
+            Console.WriteLine("Using of Field or instance variable."+resultAsField);    
+
             Console.ReadKey();
+        }
+        static int ModuloTwoNumbers(int num1, int num2)
+        {
+            Console.WriteLine("Here the variable is used from ouside the method. Global variable");
+            resultAsField = num1 % num2;
+            Console.WriteLine("Here the local variable is declared inside the method this can be accessed only within the scope.");
+            int localVariable = resultAsField % 10;
+            return localVariable;
         }
     }
 }
