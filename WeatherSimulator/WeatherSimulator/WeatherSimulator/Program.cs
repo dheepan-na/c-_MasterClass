@@ -26,6 +26,9 @@ namespace WeatherSimulator
             DisplayWithGenericMethod(temperature);
             DisplayWithIenumerableMethod(temperature);
             Console.WriteLine("Displaying the weather condition for the days");
+            DisplayWithGenericMethod(dailyCondition);
+            Console.WriteLine("Calculating the avearage tempearture as double");
+            Console.WriteLine("Displaying avearage temperature "+AveargeTemperature(temperature));
 
 
 
@@ -59,6 +62,23 @@ namespace WeatherSimulator
             }
         }
 
+        static double AveargeTemperature(int[] temperature)
+        {
+            int sum = 0;
+            Console.WriteLine("Getting avearge with nothing double");
+            foreach(int item in temperature)
+            {
+                sum += item;
+            }
+            Console.WriteLine("Avearge with no double:"+ sum/temperature.Length);
+
+            double orgSum = 0;
+            foreach(int item in temperature)
+            {
+                orgSum += item;
+            }
+            return orgSum/temperature.Length;
+        }
 
     }
 }
