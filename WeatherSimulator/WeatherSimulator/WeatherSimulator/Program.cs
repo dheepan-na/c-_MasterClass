@@ -25,40 +25,43 @@ namespace WeatherSimulator
             DisplayWithObjectsMethod(temperature.Cast<Object>().ToArray());
             DisplayWithGenericMethod(temperature);
             DisplayWithIenumerableMethod(temperature);
-            Console.WriteLine("Displaying the weather condition for the days");
+            Console.WriteLine("\nDisplaying the weather condition for the days");
             DisplayWithGenericMethod(dailyCondition);
-            Console.WriteLine("Calculating the avearage tempearture as double");
+            Console.WriteLine("\nCalculating the avearage tempearture as double");
             Console.WriteLine("Displaying avearage temperature "+AveargeTemperature(temperature));
 
-
+            Console.WriteLine("\nDisplaying Min using inbuilt functions "+temperature.Min());
+            Console.WriteLine("Displaying MaX using inbuilt functions " + temperature.Max());
+            Console.WriteLine("Displaying Min using created functions " + MinTemperature(temperature));
+            Console.WriteLine("Displaying Max using created functions " + MaxTemperature(temperature));
 
             Console.ReadKey();
         }
 
         static void DisplayWithObjectsMethod(object[] arr)
         {
-            Console.WriteLine("Displaying with the objects method.");
+            Console.WriteLine("\nDisplaying with the objects method.");
             foreach (object item in arr)
             {
-                Console.WriteLine(item);
+                Console.Write(item+" ");
             }
         }
 
         static void DisplayWithGenericMethod<T>(T[] arr)
         {
-            Console.WriteLine("Displaying with the Generics method.");
+            Console.WriteLine("\nDisplaying with the Generics method.");
             foreach (object item in arr)
             {
-                Console.WriteLine(item);
+                Console.Write(item + " ");
             }
         }
 
         static void DisplayWithIenumerableMethod(IEnumerable arr)
         {
-            Console.WriteLine("Displaying with the Ienumerable method. This type of displaying is mostly recommended.");
+            Console.WriteLine("\nDisplaying with the Ienumerable method. This type of displaying is mostly recommended.");
             foreach (object item in arr)
             {
-                Console.WriteLine(item);
+                Console.Write(item + " ");
             }
         }
 
@@ -80,5 +83,35 @@ namespace WeatherSimulator
             return orgSum/temperature.Length;
         }
 
+        static int MinTemperature(int[] temperature)
+        {
+            int min = temperature[0];
+            foreach(int item in temperature)
+            {
+                if(item < min)
+                {
+                    min = item;
+                }
+            }
+            return min;
+        }
+
+        static int MaxTemperature(int[] temperature)
+        {
+            int max = temperature[0];
+            for (int i = 1; i < temperature.Length; i++)
+            {
+                if (temperature[i] > max)
+                {
+                    max = temperature[i];
+                }
+            }
+            return max;
+        }
+
+      
+
     }
+
+
 }
