@@ -34,6 +34,7 @@ namespace WeatherSimulator
             Console.WriteLine("Displaying MaX using inbuilt functions " + temperature.Max());
             Console.WriteLine("Displaying Min using created functions " + MinTemperature(temperature));
             Console.WriteLine("Displaying Max using created functions " + MaxTemperature(temperature));
+            Console.WriteLine("\nMost common temperature "+MostCommonWeatherCondition(dailyCondition));
 
             Console.ReadKey();
         }
@@ -109,7 +110,29 @@ namespace WeatherSimulator
             return max;
         }
 
-      
+        static string MostCommonWeatherCondition(string[] condition)
+        {
+            int count = 0;
+            string mostCommon = condition[0];
+
+            foreach (string item in condition)
+            {
+                int tempCount = 0;
+                foreach (string item2 in condition)
+                {
+                    if (item == item2)
+                    {
+                        tempCount++;
+                    }
+                }
+                if (tempCount >= count)
+                {
+                    count = tempCount;
+                    mostCommon = item;
+                }
+            }
+            return mostCommon;
+        }
 
     }
 
