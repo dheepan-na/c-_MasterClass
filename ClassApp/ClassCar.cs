@@ -9,9 +9,9 @@ namespace ClassApp
     // this is an interanll class this can be called anywhere in the assembly ClassApp
     internal class ClassCar
     {
+        //backing field for the property.
         private string _modelOfCar;
         private string _brandOfCar;
-        private bool _isLuxery;
 
         public string ModelOfCar
         {
@@ -50,7 +50,7 @@ namespace ClassApp
             }
         }
 
-        public bool IsLuxery { get => _isLuxery; set => _isLuxery = value; }
+        public bool IsLuxery { get ; set ; }
 
         public ClassCar() {
             Console.WriteLine("Here we have created a constructor. It will be called whenever the object of the class is created.");

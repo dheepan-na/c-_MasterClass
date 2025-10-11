@@ -31,6 +31,8 @@
             Console.WriteLine($"Brand of the {bmw.ModelOfCar} is {bmw.BrandOfCar}.");
             Console.WriteLine("\nNow we are going to add a condition to the getter of the brand/Property. We can add conditions statement to the setter or getter.");
             Console.WriteLine($"Brand of the {audi.ModelOfCar} is {audi.BrandOfCar}.");
+            Console.WriteLine("\n The member variables declared and used are the backing field of the property created in the class. If we using condition and modifying the prop then we might need the backing field else it is not needed.\nFor example the is luxury doesn't need a backing filed.");
+            
 
 
 
