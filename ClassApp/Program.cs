@@ -13,8 +13,8 @@
             Console.WriteLine("A member variable is the field or variable that is created inside the class and outside of all the membersof the class.");
             Console.WriteLine("General rule for member variable is it should start with _ and it should be private.");
             Console.WriteLine("Being private it is not accessible outside of the class using the object or instance.");
-            ClassCar audi = new ClassCar("Audi", "A3");
-            ClassCar bmw = new ClassCar("BMW", "i7");
+            ClassCar audi = new ClassCar("Audi", "A3",true);
+            ClassCar bmw = new ClassCar("BMW", "i7",false);
 
             Console.WriteLine("\n Here we are learning about encapsulation. Encapsulation is the important aspect in the Object oriented programming.");
             Console.WriteLine(" We can encapsulate methods, member variables , events, nested elements.");
@@ -29,8 +29,11 @@
             Console.WriteLine("\nNow we are going to add a condition to the setter of the brand. We can add conditions statement to the setter or getter.");
             bmw.BrandOfCar = Console.ReadLine();
             Console.WriteLine($"Brand of the {bmw.ModelOfCar} is {bmw.BrandOfCar}.");
+            Console.WriteLine("\nNow we are going to add a condition to the getter of the brand/Property. We can add conditions statement to the setter or getter.");
+            Console.WriteLine($"Brand of the {audi.ModelOfCar} is {audi.BrandOfCar}.");
 
-         
+
+
 
 
             Console.ReadKey();

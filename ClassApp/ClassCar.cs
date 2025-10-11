@@ -11,6 +11,7 @@ namespace ClassApp
     {
         private string _modelOfCar;
         private string _brandOfCar;
+        private bool _isLuxery;
 
         public string ModelOfCar
         {
@@ -24,7 +25,17 @@ namespace ClassApp
 
         public string BrandOfCar
         {
-            get { return _brandOfCar; }
+            get
+            {
+                if (IsLuxery)
+                {
+                    return _brandOfCar+ " - Is Luxary barnd";
+                }
+                else
+                {
+                    return _brandOfCar;
+                }
+            }
             set
             {
                 if (string.IsNullOrEmpty(value))
@@ -38,16 +49,20 @@ namespace ClassApp
                 }
             }
         }
+
+        public bool IsLuxery { get => _isLuxery; set => _isLuxery = value; }
+
         public ClassCar() {
             Console.WriteLine("Here we have created a constructor. It will be called whenever the object of the class is created.");
         }
 
-        public ClassCar(string modelOfCar, string brandOfCar)
+        public ClassCar(string modelOfCar, string brandOfCar, bool isLuxery)
         {
             Console.WriteLine("\nHere we have created a custom constructor with some variable.");
             ModelOfCar = modelOfCar;
             _brandOfCar = brandOfCar;
             Console.WriteLine($"{_brandOfCar} has a model of {ModelOfCar} ");
+            IsLuxery = isLuxery;
         }
     }
 }
