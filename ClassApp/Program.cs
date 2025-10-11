@@ -26,6 +26,10 @@
             bmw.ModelOfCar = "Benz";
             Console.WriteLine("Getting the value of the property of the class.");
             Console.WriteLine(bmw.ModelOfCar);
+            Console.WriteLine("\nNow we are going to add a condition to the setter of the brand. We can add conditions statement to the setter or getter.");
+            bmw.BrandOfCar = Console.ReadLine();
+            Console.WriteLine($"Brand of the {bmw.ModelOfCar} is {bmw.BrandOfCar}.");
+
          
 
 

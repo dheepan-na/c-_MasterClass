@@ -21,6 +21,23 @@ namespace ClassApp
                 Console.WriteLine("This is set in the property. Whenver the value is passed to the property the set is called and and assign value to it.");
                 _modelOfCar = value; }
         }
+
+        public string BrandOfCar
+        {
+            get { return _brandOfCar; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    Console.WriteLine("The value is empty so assigning the default value.");
+                    _brandOfCar = "car Brand";
+                }
+                else
+                {
+                    _brandOfCar = value;
+                }
+            }
+        }
         public ClassCar() {
             Console.WriteLine("Here we have created a constructor. It will be called whenever the object of the class is created.");
         }
