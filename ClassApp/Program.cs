@@ -16,6 +16,19 @@
             ClassCar audi = new ClassCar("Audi", "A3");
             ClassCar bmw = new ClassCar("BMW", "i7");
 
+            Console.WriteLine("\n Here we are learning about encapsulation. Encapsulation is the important aspect in the Object oriented programming.");
+            Console.WriteLine(" We can encapsulate methods, member variables , events, nested elements.");
+            Console.WriteLine(" Here we have public access outside of the class whenever the object is created.\nPrivate this cannot been accessed outside of the class not even by the object.\nProtected this cannot be accessed outside of the class only the objects that is inherited can use this variable");
+            Console.WriteLine("IN Class Car the model and brand member variable is hidden. The best way to access or modify the member variable is using properties");
+            Console.WriteLine("Properties in encapsulation used to access and modify the member variable.");
+            Console.WriteLine("\nThe property has been created. It should be always public. Name of the property should be in caps.");
+            Console.WriteLine("Setting the value to the property of the class.");
+            bmw.ModelOfCar = "Benz";
+            Console.WriteLine("Getting the value of the property of the class.");
+            Console.WriteLine(bmw.ModelOfCar);
+         
+
+
             Console.ReadKey();
         }
     }

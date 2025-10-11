@@ -11,6 +11,16 @@ namespace ClassApp
     {
         private string _modelOfCar;
         private string _brandOfCar;
+
+        public string ModelOfCar
+        {
+            get {
+                Console.WriteLine(" This is get in the property. Get is used to retrive the value whenever the property is called.");
+                return _modelOfCar; 
+            } set {
+                Console.WriteLine("This is set in the property. Whenver the value is passed to the property the set is called and and assign value to it.");
+                _modelOfCar = value; }
+        }
         public ClassCar() {
             Console.WriteLine("Here we have created a constructor. It will be called whenever the object of the class is created.");
         }
@@ -18,9 +28,9 @@ namespace ClassApp
         public ClassCar(string modelOfCar, string brandOfCar)
         {
             Console.WriteLine("\nHere we have created a custom constructor with some variable.");
-            _modelOfCar = modelOfCar;
+            ModelOfCar = modelOfCar;
             _brandOfCar = brandOfCar;
-            Console.WriteLine($"{_brandOfCar} has a model of {_modelOfCar} ");
+            Console.WriteLine($"{_brandOfCar} has a model of {ModelOfCar} ");
         }
     }
 }
