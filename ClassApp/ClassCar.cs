@@ -51,11 +51,13 @@ namespace ClassApp
         }
 
         public bool IsLuxery { get ; set ; }
-
+        
+        //default constructor.
         public ClassCar() {
             Console.WriteLine("Here we have created a constructor. It will be called whenever the object of the class is created.");
         }
 
+        //Custom Constructor
         public ClassCar(string modelOfCar, string brandOfCar, bool isLuxery)
         {
             Console.WriteLine("\nHere we have created a custom constructor with some variable.");
