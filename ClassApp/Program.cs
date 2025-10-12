@@ -44,6 +44,8 @@
             Console.WriteLine($"The {classCar.ModelOfCar} of {classCar.BrandOfCar} brand is it luxury: {classCar.IsLuxery}");
 
             Console.WriteLine("\nThe method are function that is declared inside of the class. Method execute action w.r.t the properties or values of the object.");
+            classCar.Drive();
+            bmw.Drive();
 
             
 

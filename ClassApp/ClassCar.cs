@@ -66,5 +66,10 @@ namespace ClassApp
             Console.WriteLine($"{_brandOfCar} has a model of {ModelOfCar} ");
             IsLuxery = isLuxery;
         }
+
+        public void Drive()
+        {
+            Console.WriteLine($"I am driving the car of model {ModelOfCar} of {BrandOfCar}");
+        }
     }
 }
