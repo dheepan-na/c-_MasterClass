@@ -58,8 +58,11 @@
             Customer customer2 = new Customer("Yamuna2");
             Console.WriteLine($"customer name is {customer2.Name}");
 
-
-
+            Console.WriteLine("\nDefault parameter or optional parameter is the value that can be given to the parameter of the members or contructor. It can be used when the value is not provided.");
+            customer2.SetDetails("Yamuna3");
+            Console.WriteLine($"customer name is {customer2.Name} , Address: {customer2.GetAddress()} , Phonenumber: {customer2.PhoneNumber}");
+            Customer customer3 = new Customer("Latha", "Vellakovil");
+            Console.WriteLine($"customer name is {customer3.Name} , Address: {customer3.Address} , Phonenumber: {customer3.PhoneNumber}");
 
 
 

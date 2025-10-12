@@ -15,7 +15,16 @@ namespace ClassApp
 
         public Customer(string name)=> this.Name = name;
 
-        public void SetDetails(string name, string address, int phoneNumber)
+        public Customer(string name, string address, int phoneNumber = 790422)
+        {
+            this.Name = name;
+            this.Address = address;
+            this.PhoneNumber = phoneNumber;
+        }
+
+
+
+        public void SetDetails(string name, string address = "NA", int phoneNumber=790422)
         {
             this.Name = name;
             this.Address = address;
