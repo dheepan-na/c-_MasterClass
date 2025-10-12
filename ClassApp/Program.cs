@@ -46,6 +46,11 @@
             Console.WriteLine("\nThe method are function that is declared inside of the class. Method execute action w.r.t the properties or values of the object.");
             classCar.Drive();
             bmw.Drive();
+            
+            Customer customer = new Customer();
+            customer.SetDetails("Dheepan", "Vellakoil", 79948459);
+            Console.WriteLine($"customer name is {customer.Name} , Address: {customer.Address} , Phonenumber: {customer.PhoneNumber}");
+
 
             
 
