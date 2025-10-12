@@ -50,9 +50,15 @@
             Customer customer = new Customer();
             customer.SetDetails("Dheepan", "Vellakoil", 79948459);
             Console.WriteLine($"customer name is {customer.Name} , Address: {customer.Address} , Phonenumber: {customer.PhoneNumber}");
+            Console.WriteLine("\n Experrsion bodied members if the members , properties , constructor, finalizers and indexces contains only one single expression this can be used.");
+            Console.WriteLine("Expression bodied members is using => lamba operator insted of {}");
+            customer.SetName("Yamuna");
+            Console.WriteLine($"customer name is {customer.Name} , Address: {customer.GetAddress()} , Phonenumber: {customer.PhoneNumber}");
+
+            Customer customer2 = new Customer("Yamuna2");
+            Console.WriteLine($"customer name is {customer2.Name}");
 
 
-            
 
 
 
