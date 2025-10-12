@@ -32,6 +32,19 @@
             Console.WriteLine("\nNow we are going to add a condition to the getter of the brand/Property. We can add conditions statement to the setter or getter.");
             Console.WriteLine($"Brand of the {audi.ModelOfCar} is {audi.BrandOfCar}.");
             Console.WriteLine("\n The member variables declared and used are the backing field of the property created in the class. If we using condition and modifying the prop then we might need the backing field else it is not needed.\nFor example the is luxury doesn't need a backing filed.");
+
+            Console.WriteLine("\nDefault contructor are used to assign default value to the class. Even whec the values are not passed to the constructor.");
+            ClassCar classCar = new ClassCar();
+            Console.WriteLine("Enter the brand of the car");
+            classCar.BrandOfCar = Console.ReadLine();
+            Console.WriteLine("Enter the model of the car");
+            classCar.ModelOfCar = Console.ReadLine();
+            Console.WriteLine("Is the car Luxury");
+            classCar.IsLuxery= bool.Parse(Console.ReadLine());
+            Console.WriteLine($"The {classCar.ModelOfCar} of {classCar.BrandOfCar} brand is it luxury: {classCar.IsLuxery}");
+
+            Console.WriteLine("\nThe method are function that is declared inside of the class. Method execute action w.r.t the properties or values of the object.");
+
             
 
 
