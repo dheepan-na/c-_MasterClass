@@ -64,6 +64,12 @@
             Console.WriteLine($"customer name is {customer2.Name} , Address: {customer2.GetAddress()} , Phonenumber: {customer2.PhoneNumber}");
             Customer customer3 = new Customer("Latha", address: "Vellakovil");
             Console.WriteLine($"customer name is {customer3.Name} , Address: {customer3.Address} , Phonenumber: {customer3.PhoneNumber}");
+            Console.WriteLine("\nComputed property is the type of property in which the values of the property is dependented on the other property or values.");
+            Rectangle rectangle = new Rectangle();
+            rectangle.Width = 5;
+            rectangle.Height = 5;
+            Console.WriteLine("The area of the rectangle is" + rectangle.Area);
+
 
 
 
