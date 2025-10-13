@@ -70,6 +70,10 @@
             rectangle.Height = 5;
             Console.WriteLine("The area of the rectangle is" + rectangle.Area);
 
+            Console.WriteLine("\nMethod, Constructor or fields with the static keyword can be called without creating the object or the instance. But with the static keyword cannot be called with the object also");
+            Console.WriteLine("And the static method should be called with the class name only.");
+            Rectangle.DisplaySetArea();
+
 
 
 
