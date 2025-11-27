@@ -8,5 +8,10 @@ namespace QuizzAPp
 {
     internal class Quiz
     {
+        Questions[] questions;
+        public Quiz(Questions[] questions)
+        {
+            this.questions = questions;
+        }
     }
 }
