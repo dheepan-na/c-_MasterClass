@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using NZWalks.API.Data;
+using NZWalks.API.Models.Domain;
 
 namespace NZWalks.API
 {
@@ -13,6 +16,7 @@ namespace NZWalks.API
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddDbContext<NZWalksDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("NZWalksConnectionStrings")));
 
             var app = builder.Build();
 
